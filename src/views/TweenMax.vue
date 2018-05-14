@@ -1,15 +1,30 @@
 <template>
     <div class="hello">
-        1111
+        <input v-model.number="number" type="number" step="20">
+        <p>{{ animatedNumber }}</p>
     </div>
 </template>
 
 <script>
+import {TweenLite} from 'gsap'
+
 export default {
     name: '',
     data () {
         return {
-            msg: 'Welcome to Your Vue.js App'
+            number: 0,
+            tweenedNumber: 0
+        }
+    },
+    computed: {
+        animatedNumber () {
+            // return this.number.toFixed(0)
+            return this.tweenedNumber.toFixed(0)
+        }
+    },
+    watch: {
+        number: newValue => {
+            TweenLite.to(this.data, 0.5, { tweenedNumber: newValue })
         }
     }
 }
