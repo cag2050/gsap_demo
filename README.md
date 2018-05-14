@@ -1,5 +1,7 @@
 # gsap_demo
 
+* GSAP（GreenSock Animation Platform），专业的 web 动画库，github地址：https://github.com/greensock/GreenSock-JS
+
 > A Vue.js project
 
 ## Build Setup
