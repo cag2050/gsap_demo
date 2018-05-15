@@ -1,7 +1,7 @@
 <template>
     <div id="app">
         路由列表：<br/>
-        <router-link to='/'>TweenMax 例子</router-link>
+        <router-link to='/'>TweenLite 例子</router-link>
         <br/>
         <router-link to='/hello'>hello 页面</router-link>
         <br/>
