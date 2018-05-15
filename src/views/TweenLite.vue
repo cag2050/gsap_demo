@@ -47,7 +47,6 @@ export default {
                 tweenedNumber: newValue,
                 onUpdate () {
                     document.getElementById('changeContainer').innerHTML = _this.tweenedNumber.toFixed(0).toLocaleString()
-                    // document.getElementById('changeContainer').innerHTML = 'sss'
                 },
                 ease: Circ.easeOut
             })
