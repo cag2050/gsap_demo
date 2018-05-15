@@ -1,13 +1,15 @@
 <template>
     <div class="hello">
-        <input v-model.number="number" type="number" step="20">
-        <p ref="changedContainer">{{ animatedNumber }}</p>
+        <p>input框，数字步长为10</p>
+        <input v-model.number="number" type="number" step="10">
+        <p id="changedContainer">{{ animatedNumber }}</p>
+        <button @click="addNum">点击加10</button>
+        <button @click="minusNum">点击减10</button>
     </div>
 </template>
 
 <script>
 import {TweenLite} from 'gsap'
-// let TweenLite = require('gsap/src/minified/TweenLite.min.js')
 
 export default {
     name: '',
@@ -18,20 +20,27 @@ export default {
         }
     },
     created () {
-
+        // console.log(TweenLite)
     },
     mounted () {
-        console.log(TweenLite)
+
+    },
+    methods: {
+        addNum () {
+            this.number += 10
+        },
+        minusNum () {
+            this.number -= 10
+        }
     },
     computed: {
         animatedNumber () {
-            // return this.number.toFixed(0)
             return this.tweenedNumber.toFixed(0)
         }
     },
     watch: {
-        number: newValue => {
-            TweenLite.to(this.refs.changedContainer, 0.5, { tweenedNumber: newValue })
+        number (newValue) {
+            TweenLite.to(this.$data, 0.5, { tweenedNumber: newValue })
         }
     }
 }
