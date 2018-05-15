@@ -10,7 +10,7 @@ export default new Router({
         {
             path: '/',
             name: '',
-            component: () => import('./views/TweenMax')
+            component: () => import('./views/TweenLite')
         },
         {
             path: '/hello',
