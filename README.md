@@ -3,11 +3,11 @@
 * GSAP（GreenSock Animation Platform），专业的 web 动画库，github地址：https://github.com/greensock/GreenSock-JS
 
 * 官方地址：https://greensock.com/tweenmax
-github 地址：https://github.com/greensock/GreenSock-JS
+* github 地址：https://github.com/greensock/GreenSock-JS
 
 * 比较好的介绍文章：
-https://segmentfault.com/a/1190000005366176 。
-http://svgtric.com/tricks/aad945dc6d6c13049495ddd146f7526c
+1. https://segmentfault.com/a/1190000005366176 。
+2. http://svgtrick.com/tricks/aad945dc6d6c13049495ddd146f7526c
 
 > A Vue.js project
 
