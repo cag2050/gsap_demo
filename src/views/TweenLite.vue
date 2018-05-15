@@ -16,8 +16,8 @@ export default {
     name: '',
     data () {
         return {
-            number: 100000,
-            tweenedNumber: 100000
+            number: 10000,
+            tweenedNumber: 10000
         }
     },
     created () {
@@ -36,7 +36,6 @@ export default {
     },
     computed: {
         animatedNumber () {
-            // return this.tweenedNumber.toFixed(0)
             return this.tweenedNumber.toFixed(0)
         }
     },
@@ -46,7 +45,7 @@ export default {
             TweenLite.to(this.$data, 0.5, {
                 tweenedNumber: newValue,
                 onUpdate () {
-                    document.getElementById('changeContainer').innerHTML = _this.tweenedNumber.toFixed(0).toLocaleString()
+                    document.getElementById('changeContainer').innerHTML = parseInt(_this.tweenedNumber.toFixed(0)).toLocaleString()
                 },
                 ease: Circ.easeOut
             })
