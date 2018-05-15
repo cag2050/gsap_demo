@@ -1,12 +1,13 @@
 <template>
     <div class="hello">
         <input v-model.number="number" type="number" step="20">
-        <p>{{ animatedNumber }}</p>
+        <p ref="changedContainer">{{ animatedNumber }}</p>
     </div>
 </template>
 
 <script>
 import {TweenLite} from 'gsap'
+// let TweenLite = require('gsap/src/minified/TweenLite.min.js')
 
 export default {
     name: '',
@@ -16,6 +17,12 @@ export default {
             tweenedNumber: 0
         }
     },
+    created () {
+
+    },
+    mounted () {
+        console.log(TweenLite)
+    },
     computed: {
         animatedNumber () {
             // return this.number.toFixed(0)
@@ -24,7 +31,7 @@ export default {
     },
     watch: {
         number: newValue => {
-            TweenLite.to(this.data, 0.5, { tweenedNumber: newValue })
+            TweenLite.to(this.refs.changedContainer, 0.5, { tweenedNumber: newValue })
         }
     }
 }
